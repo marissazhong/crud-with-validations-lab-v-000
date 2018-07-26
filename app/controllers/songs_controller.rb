@@ -4,17 +4,17 @@ class SongsController < ApplicationController
   end
 
   def show
-    @author = Author.find(params[:id])
+    @song = Song.find(params[:id])
   end
 
   def new
-    @author = Author.new
+    @song = Song.new
   end
 
   def create
-    @author = Author.new(author_params)
-    if @author.save
-      redirect_to author_path(@author)
+    @song = Song.new(song_params)
+    if @song.save
+      redirect_to song_path(@song)
     else
       render :new
     end
@@ -22,7 +22,7 @@ class SongsController < ApplicationController
 
   private
 
-  def author_params
+  def song_params
     params.permit(:name, :email, :phone_number)
   end
 
