@@ -1,9 +1,5 @@
 class SongsController < ApplicationController
-  validates :title, presence: true
+  validates :title, presence: true, uniqueness: { scope: :year }
 
-
-  def same_title_same_year?
-    
-  end
 
 end
