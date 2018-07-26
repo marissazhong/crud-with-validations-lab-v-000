@@ -5,4 +5,5 @@ class SongsController < ApplicationController
   def same_artist_same_year?
 
   end
+  
 end
