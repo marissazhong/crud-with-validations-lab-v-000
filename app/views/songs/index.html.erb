@@ -3,8 +3,8 @@
     <tr>
       <th>Title</th>
       <th>Year</th>
+      <th>Artist Name</th>
       <th>Genre</th>
-      <th>Artist name</th>
       <th></th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
       <tr>
         <td><%= song.title %></td>
         <td><%= song.release_year %></td>
-        <td><%= song.genre %></td>
         <td><%= song.artist_name %></td>
+        <td><%= song.genre %></td>
         <td>
           <%= link_to 'View', song %> |
           <%= link_to 'Edit', edit_song_path(song) %> |
